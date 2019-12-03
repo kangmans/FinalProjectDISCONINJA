@@ -9,14 +9,14 @@ package blackjack;
  *
  * @author User
  */
-public class CARD {
+public class CARD{
     
     private int value;
 
     public CARD(int value) {
         this.value = value;
     }
-
+   
     public String toString() {
         return "" + value;
     }

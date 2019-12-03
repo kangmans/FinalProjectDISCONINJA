@@ -11,16 +11,16 @@ import java.util.Scanner;
  * @author User
  */
 public class PLAYER extends PERSON{
-    
+
      private Scanner keyboard;
 
     public PLAYER(){
         super();
         name = "You";
         keyboard = new Scanner(System.in);
-    }
+	}
 
-    public boolean wantToHit() {
+	public boolean wantToHit() {
         System.out.print("\nWould you like to \"hit\" or \"stay\": ");
         while (true) {
             String input = keyboard.next();
@@ -30,7 +30,8 @@ public class PLAYER extends PERSON{
                 return false;
             } else {
                 System.out.print("Type \"hit\" or \"stay\": ");
-            }
-        }
+	}
+
+}
     }
 }
