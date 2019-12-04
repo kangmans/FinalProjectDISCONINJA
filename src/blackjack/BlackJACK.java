@@ -12,12 +12,17 @@ import java.util.Scanner;
  *
  * @author User
  */
+// here we create blackjack as a super class.
 public abstract class BlackJACK {
 
+    // here we create game as a static object of the blackjack class.
     private static BlackJACK game;
+    // we create the list of array of the class person named players.
     private ArrayList<PERSON> players;
+    //create deck asa the object of class GroupOfCards.
     private GroupOfCards deck;
-
+       
+        // here we are creating methods to do different task.
 	public BlackJACK() {
         initializeGame();
         dealCards();
@@ -30,14 +35,14 @@ public abstract class BlackJACK {
 	 * 
 	 * @param args the command line arguments
 	 */
+        // this is the main method of blackjack
 	public static void main(String[] args) {
-        // TODO code application logic here
         game = new BlackJACK() {};
 	}
 
-    
+        // here we are calling the methods.
 	private void initializeGame() {
-        deck = new GroupOfCards();
+        deck = new GroupOfCards() {};
         players = new ArrayList<PERSON>();
         players.add(new PLAYER());
         players.add(new DEALER());
@@ -58,6 +63,7 @@ public abstract class BlackJACK {
             while(!endOfTurn) {
                 player.printCards(true);
                 boolean hit = player.wantToHit();
+               
                 if (hit) {
                     deck.dealCard(player);
                     System.out.println(player.getName() + " drew a card.\n");
@@ -65,7 +71,7 @@ public abstract class BlackJACK {
                         endOfTurn = true;
                         System.out.println(player.getName() + " died.\n");
 	}
-                } else {
+                } else{
                     endOfTurn = true;
                     System.out.println(player.getName() + " stayed.\n");
                 }

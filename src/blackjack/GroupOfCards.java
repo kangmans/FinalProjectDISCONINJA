@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author User
  */
-public class GroupOfCards {
+public abstract class GroupOfCards {
 
 	public CARD drawNextCard() {
         int value = ThreadLocalRandom.current().nextInt(2,12);

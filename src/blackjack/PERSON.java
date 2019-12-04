@@ -29,6 +29,7 @@ public abstract class PERSON {
     }
 
     public abstract boolean wantToHit();
+   
 
     public byte getTotal() {
         return total;

@@ -9,7 +9,7 @@ package blackjack;
  *
  * @author User
  */
-public class CARD{
+public class CARD extends GroupOfCards{
     
     private int value;
 
@@ -22,6 +22,12 @@ public class CARD{
     }
 
     public int getValue() {
+        return value;
+    }
+    
+    public int setValue()
+    {
+        this.value = value;
         return value;
     }
 }

@@ -23,5 +23,5 @@ public class DEALER extends PERSON{
         if (ThreadLocalRandom.current().nextInt(0,2) == 0) return true;
         return false;
 	}
-
+        
 }
